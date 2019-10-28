@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Reflection;
 
 namespace ConsoleTestAttributes
@@ -36,7 +36,7 @@ namespace ConsoleTestAttributes
 				new ParameterData("Peter", 40)
 			};
 
-			Console.WriteLine("Texto from persons:");
+			Console.WriteLine("Text from object:");
 
 			foreach(var person in persons)
 			{

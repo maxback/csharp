@@ -5,13 +5,13 @@ namespace ConsoleTestAttributes
 {
 	class Program
 	{
-		static string GetTextAttibutes(ParameterData parameterData)
+		static string GetTextAttibutes(object obj) //Alterado apra receber object e não um tipo específico
 		{
 			Type t;
 			AdditionalInfoAttribute att;
 			string r = string.Empty;
 
-			t = typeof(ParameterData);
+			t = obj.GetType(); // ASSIM consegue pegar o tipo real 
 
 			//get Fields from class
 			FieldInfo[] fi = t.GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
